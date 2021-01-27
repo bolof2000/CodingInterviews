@@ -1,0 +1,1 @@
+Some random solutions to some common coding interview questions in Python. This repo is updated daily 
