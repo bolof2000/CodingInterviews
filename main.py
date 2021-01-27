@@ -66,8 +66,7 @@ class Solution(object):
         result[i] *=product
       
       return result
-      
-      
+  
     
 
 test = Solution()
@@ -80,5 +79,5 @@ word = "DFDDF"
 #print(test.randomNote2(magazing,word))
 #print(test.twoNumberSum([1,2,3,4,5],9))
 #print(test.duplicateNumber2([1,2,3,4,5,1,2,3,4]))
-print(test.productArrayExceptItself([1,2,3,4,5]))
+#print(test.productArrayExceptItself([1,2,3,4,5]))
 
