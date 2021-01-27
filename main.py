@@ -51,13 +51,24 @@ class Solution(object):
 
 
     def productArrayExceptItself(self,nums):
+      
+      result = [1]*len(nums)
+      product = 1
+
+      # multiply from left
+      for i in range(0,len(nums)-1):
+        product *= nums[i-1]
+        result[i] = product 
+
+      product =1 
 
       for i in range(len(nums)-2,-1,-1):
-        print(nums[i])
+        product *=nums[i+1]
+        result[i] *=product
 
-
-
-
+      return result
+    
+    
 test = Solution()
 magazing = ['A','B','C','D','E','F','D','F']
 #dic = {A:1,B:1,C:1,D:2,F:2}
