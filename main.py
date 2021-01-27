@@ -66,13 +66,33 @@ class Solution(object):
         result[i] *=product
       
       return result
-  
     
+    def threeSum(self,nums,target):
 
+      nums.sort()
+      result =[]
+      for i in range(len(nums)-2):
+        left =i+1
+        right = len(nums)-1
+        
+        while left < right:
+          currentSum = nums[i]+nums[left]+nums[right]
+          if currentSum == target:
+            result.append([nums[i],nums[left],nums[right]])
+            left +=1
+            right -=1
+          elif currentSum > target:
+            right -=1
+          else:
+            left +=1
+      return result
+
+
+   
 test = Solution()
-magazing = ['A','B','C','D','E','F','D','F']
+#magazing = ['A','B','C','D','E','F','D','F']
 #dic = {A:1,B:1,C:1,D:2,F:2}
-word = "DFDDF"
+#word = "DFDDF"
 #print(sorted(list(word)))
 #print(sorted(magazing))
 #print(test.randomNote(magazing,word))
@@ -80,4 +100,10 @@ word = "DFDDF"
 #print(test.twoNumberSum([1,2,3,4,5],9))
 #print(test.duplicateNumber2([1,2,3,4,5,1,2,3,4]))
 #print(test.productArrayExceptItself([1,2,3,4,5]))
+arr1 = [1,2,3,4,5,6,7]
+arr2 = [1,2,3]
+#print(test.removeElements(arr1,arr2))
+nums = [12, 3, 1, 2, -6, 5, -8, 6]
+target =0
+print(test.threeSum(nums,target))
 
